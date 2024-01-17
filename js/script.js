@@ -45,11 +45,15 @@ function addNewRow(student) {
 
     //Insert email student
     var emailNode = document.createTextNode(student.email);
-    newRow.insertCell().appendChild(emailNode);
+    var cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+    cell.appendChild(emailNode);
 
     //Insert phone student
     var phoneNode = document.createTextNode(student.phone);
-    newRow.insertCell().appendChild(phoneNode);
+    var cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+    cell.appendChild(phoneNode);
 
     //Insert course student
     var courseNode = document.createTextNode(student.course);

@@ -20,7 +20,7 @@
             </div>
 
             <div class="row">
-                <div class="col-10 offset-1">
+                <div class="col-md-10 offset-md-1">
                     <form onsubmit="saveStudent(); return false;" id="formStudent">
                         <div class="row mb-3 mt-3">
                             <label for="inputName" class="col-sm-2 col-form-label">Nome:</label>
@@ -93,14 +93,14 @@
             </div>
 
             <div class="row">
-                <div class="col-10 offset-1">
+                <div class="col-md-10 offset-md-1">
                     <table class="table" id="studentsTable">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nome</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Telefone</th>
+                                <th scope="col" class="d-none d-md-table-cell">Email</th>
+                                <th scope="col" class="d-none d-md-table-cell">Telefone</th>
                                 <th scope="col">Curso</th>
                                 <th scope="col">Turno</th>
                             </tr>
