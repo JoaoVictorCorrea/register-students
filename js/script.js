@@ -59,3 +59,32 @@ function addNewRow(student) {
     var shiftNode = document.createTextNode(student.shift);
     newRow.insertCell().appendChild(shiftNode);
 }
+
+//Save a student
+function saveStudent() {
+
+    var shifts = document.getElementsByName("radioShift");
+    var shiftSelected = "";
+
+    for (var i = 0; i < shifts.length; i++) {
+        if (shifts[i].checked) {
+            shiftSelected = shifts[i].value;
+            break;
+        }
+    }
+
+    var student = {
+        id: students.length + 1,
+        name: document.getElementById("inputName").value,
+        email: document.getElementById("inputEmail").value,
+        phone: document.getElementById("inputPhone").value,
+        course: document.getElementById("selectCourse").value,
+        shift: shiftSelected,
+    };
+
+    addNewRow(student);
+
+    students.push(student);
+
+    document.getElementById("formStudent").reset();
+}

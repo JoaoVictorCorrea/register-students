@@ -21,7 +21,7 @@
 
             <div class="row">
                 <div class="col-10 offset-1">
-                    <form>
+                    <form onsubmit="saveStudent(); return false;" id="formStudent">
                         <div class="row mb-3 mt-3">
                             <label for="inputName" class="col-sm-2 col-form-label">Nome:</label>
                             <div class="col-sm-10">
@@ -42,11 +42,11 @@
                         </div>
 
                         <div class="row mb-3 mt-3">
-                            <label for="selectCurso" class="col-sm-2 col-form-label">Curso:</label>
+                            <label for="selectCourse" class="col-sm-2 col-form-label">Curso:</label>
                             <div class="col-sm-4">
-                                <select class="form-select" aria-label="Selecione uma categoria" id="selectCurso" required>
-                                    <option value="1" selected>Java</option>
-                                    <option value="2">Angular</option>
+                                <select class="form-select" aria-label="Selecione um curso" id="selectCourse" required>
+                                    <option value="Java" selected>Java</option>
+                                    <option value="Angular">Angular</option>
                                 </select>
                             </div>
                         </div>
@@ -56,19 +56,19 @@
                             <div class="col-sm-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="radioShift" id="morningRadio" value="Manhã" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="radioShift">
                                       Manhã
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioShift" id="eveningRadio" value="Tarde" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <input class="form-check-input" type="radio" name="radioShift" id="eveningRadio" value="Tarde">
+                                    <label class="form-check-label" for="radioShift">
                                       Tarde
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioShift" id="nightRadio" value="Noite" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <input class="form-check-input" type="radio" name="radioShift" id="nightRadio" value="Noite">
+                                    <label class="form-check-label" for="radioShift">
                                       Noite
                                     </label>
                                 </div>
