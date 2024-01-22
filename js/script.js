@@ -57,11 +57,15 @@ function addNewRow(student) {
 
     //Insert course student
     var courseNode = document.createTextNode(student.course);
-    newRow.insertCell().appendChild(courseNode);
+    var cell = newRow.insertCell();
+    cell.className = "d-none d-sm-table-cell";
+    cell.appendChild(courseNode);
 
     //Insert shift student
     var shiftNode = document.createTextNode(student.shift);
-    newRow.insertCell().appendChild(shiftNode);
+    var cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+    cell.appendChild(shiftNode);
 }
 
 //Save a student
